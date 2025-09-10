@@ -1,0 +1,32 @@
+ .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -20px 0px 0px 0px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+  }
+  .slick-arrow.slick-prev {
+    left: 0;
+    /* background: url("https://img.icons8.com/ios/50/000000/long-arrow-left.png") 0  0 / 100% no-repeat; */
+  }
+.slick-arrow.slick-next {
+    right: 0;
+    /* background: url("https://img.icons8.com/ios/50/000000/long-arrow-right.png") 0 0 / 100% no-repeat; */
+  }
+
+  /* Add this CSS in your main CSS file */
+
+.slick-slider {
+  margin: 0; /* Remove default margin */
+}
+
+.slick-list {
+  padding: 0; /* Remove default padding */
+}
+
+.slick-slide > div {
+  margin: 0; /* Ensure no margin on slide items */
+  padding: 0; /* Ensure no padding on slide items */
+}
