@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"           # Ollama REST API port
+    volumes:
+      - ollama_data:/root/.ollama   # Store pulled models persistently
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h       # Keeps model loaded longer (optional)
+    restart: unless-stopped         # Auto restart if container crashes
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+          cpus: "2"
+
+volumes:
+  ollama_data:
